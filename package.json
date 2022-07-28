@@ -1,7 +1,7 @@
 {
   "name": "nuxt-mycelium-monorepo",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "packageManager": "pnpm@7.6.0",
   "scripts": {
     "changelog-md": "auto-changelog --commit-limit false --hide-credit",
