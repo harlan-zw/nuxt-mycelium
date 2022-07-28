@@ -1,11 +1,9 @@
 import { SitemapStream, streamToPromise } from 'sitemap'
 import { contentPaths } from '../util/content'
 
-const $apiFetch = $fetch.create({ baseURL: '/api/' })
-
 export default defineEventHandler(async (event) => {
   // Grab theme configuration
-  const theme = await $apiFetch('/_theme/options')
+  const theme = await $fetch('/api/_theme/options')
 
   const routes = await contentPaths(event)
 

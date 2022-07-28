@@ -8,118 +8,99 @@ import config from './theme.config'
 const resolvePath = (p = '') => resolve(dirname(fileURLToPath(import.meta.url)), p)
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
-export default defineNuxtConfig(() => {
-  return {
-    alias: {
-      'nuxt-mycelium': resolvePath(),
+export default defineNuxtConfig({
+  alias: {
+    'nuxt-mycelium': resolvePath(),
+  },
+  app: {
+    theme: {
+      meta: {
+        name: 'Mycelium Theme',
+        author: 'Harlan Wilton (@harlan_zw)',
+        description: 'A living and breathing Nuxt 3, Nuxt Content 2 template.',
+      },
     },
-    app: {
-      theme: {
-        meta: {
-          name: 'Mycelium Theme',
-          author: 'Harlan Wilton (@harlan_zw)',
-          description: 'A living and breathing Nuxt 3, Nuxt Content 2 template.',
+  },
+  experimental: {
+    viteNode: true,
+  },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          // automatically import tokens into scss
+          additionalData: '@import "./.nuxt/tokens/tokens.scss";',
         },
       },
     },
-    experimental: {
-      viteNode: true,
-    },
-    vite: {
-      css: {
-        preprocessorOptions: {
-          scss: {
-            // automatically import tokens into scss
-            additionalData: '@import "./.nuxt/tokens/tokens.scss";',
-          },
-        },
-      },
-    },
-    modules: [
-      // Themify
-      '@nuxt-themes/config/module',
-      '@nuxtjs/design-tokens/module',
-      // Website
-      '@nuxtjs/color-mode',
-      '@vueuse/nuxt',
-      '@nuxt/image',
-      'nuxt-schema-org',
-      'nuxt-windicss',
-      // custom content modules, need to come before the content module
-      resolvePath('modules/unplugin-icons'),
-      resolvePath('modules/content-utils'),
-      '@nuxt/content',
-    ],
-    schemaOrg: {
-      disableRuntimeScriptsWhenSSR: true,
-      // To be rewritten manually by the theme user
-      canonicalHost: config.site.url,
-      // To be rewritten manually by the theme user
-      defaultLanguage: config.site.language,
-    },
-    css: [
-      resolvePath('resources/scrollbars.css'),
-      resolvePath('resources/main.scss'),
-    ],
-    // https://color-mode.nuxtjs.org
-    colorMode: {
-      fallback: 'dark',
-      classSuffix: '',
-    },
-    hooks: {
-      'app:templates': function (app) {
-        app.templates = app.templates
-          .filter(t => t.filename === 'views/document.template.mjs')
-          .map((t) => {
-            const content = t.getContents()
-            t.getContents = () => {
-              return content.replace('</html>',
-`<!--
-  Powered by Nuxt Mycelium
--->
-</html>`)
-            }
-            return t
-          })
-      },
-    },
+  },
+  modules: [
+    // Themify
+    '@nuxt-themes/config/module',
+    '@nuxtjs/design-tokens/module',
+    // Website
+    '@nuxtjs/color-mode',
+    '@vueuse/nuxt',
+    '@nuxt/image',
+    'nuxt-schema-org',
+    'nuxt-windicss',
+    // custom content modules, need to come before the content module
+    resolvePath('modules/unplugin-icons'),
+    resolvePath('modules/content-utils'),
+    '@nuxt/content',
+  ],
+  schemaOrg: {
+    disableRuntimeScriptsWhenSSR: true,
+    // To be rewritten manually by the theme user
+    canonicalHost: config.site.url,
+    // To be rewritten manually by the theme user
+    defaultLanguage: config.site.language,
+  },
+  css: [
+    resolvePath('resources/scrollbars.css'),
+    resolvePath('resources/main.scss'),
+  ],
+  // https://color-mode.nuxtjs.org
+  colorMode: {
+    fallback: 'dark',
+    classSuffix: '',
+  },
 
-    // https://content.nuxtjs.org
-    content: {
-      highlight: {
-        // See the available themes on https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-theme
-        theme: 'dracula',
-      },
+  // https://content.nuxtjs.org
+  content: {
+    highlight: {
+      // See the available themes on https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-theme
+      theme: 'dracula',
     },
-    /*
-       router: {
-         trailingSlash: false,
-       },
+  },
+  /*
+     router: {
+       trailingSlash: false,
+     },
 
-       image: {
-        cloudinary: {
-           baseURL: 'https://res.cloudinary.com/dl6o1xpyq/image/upload/images',
-           modifiers: {
-             quality: 'auto:best',
-             dpr: 'auto',
-           },
+     image: {
+      cloudinary: {
+         baseURL: 'https://res.cloudinary.com/dl6o1xpyq/image/upload/images',
+         modifiers: {
+           quality: 'auto:best',
+           dpr: 'auto',
          },
-         domains: [
-           'avatars0.githubusercontent.com',
-         ],
-       }, */
+       },
+       domains: [
+         'avatars0.githubusercontent.com',
+       ],
+     }, */
 
-    nitro: {
-      prerender: {
-        crawlLinks: true,
-        routes: [
-          '/',
-          '/sitemap.xml',
-          '/feed.xml',
-          '/feed.json',
-          '/feed.atom',
-        ],
-      },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: [
+        '/',
+        '/sitemap.xml',
+        '/feed.xml',
+        '/feed.json',
+        '/feed.atom',
+      ],
     },
-  }
+  },
 })

@@ -60,7 +60,7 @@
     "@antfu/eslint-config": "^0.25.0",
     "@nuxtjs/eslint-config-typescript": "^10.0.0",
     "eslint": "^8.20.0",
-    "nuxt": "npm:nuxt3@latest",
+    "nuxt": "3.0.0-rc.6",
     "typescript": "^4.7.4"
   },
   "pnpm": {
