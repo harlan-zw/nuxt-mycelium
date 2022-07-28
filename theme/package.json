@@ -2,6 +2,7 @@
   "name": "nuxt-mycleium",
   "version": "0.0.2",
   "main": "nuxt.config.ts",
+  "types": "types.ts",
   "files": [
     "app/",
     "components/",
@@ -11,6 +12,7 @@
     "public/",
     "resources/",
     "server/",
+    "types.ts",
     "nuxt.config.ts",
     "windi.config.ts",
     "theme.config.ts",
