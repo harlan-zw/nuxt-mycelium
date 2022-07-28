@@ -1,6 +1,6 @@
 {
   "name": "nuxt-mycleium",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "nuxt.config.ts",
   "types": "types.ts",
   "files": [
