@@ -9,7 +9,7 @@
     "dev": "pnpm -r --parallel --filter=./packages/** run dev",
     "lint": "eslint . --fix",
     "lint:check": "eslint .",
-    "release": "bumpp package.json packages/*/package.json --commit --push --tag",
+    "release": "bumpp package.json theme/package.json --commit --push --tag",
     "test": "vitest"
   },
   "devDependencies": {
