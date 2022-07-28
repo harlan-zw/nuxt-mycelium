@@ -14,6 +14,7 @@ export interface Post extends ParsedContent {
   modifiedAt: Date
   path: string
   renderer: 'post' | 'page'
+  image?: string
   icon?: string
   nav?: boolean
 }
