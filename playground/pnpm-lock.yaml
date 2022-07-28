@@ -5,9 +5,9 @@ importers:
   .:
     specifiers:
       nuxt: 3.0.0-rc.6
-      nuxt-mycleium: link:../theme
+      nuxt-mycelium: link:../theme
     dependencies:
-      nuxt-mycleium: link:../theme
+      nuxt-mycelium: link:../theme
     devDependencies:
       nuxt: 3.0.0-rc.6
 
