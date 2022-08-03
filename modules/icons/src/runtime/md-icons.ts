@@ -1,14 +1,13 @@
 import { visit } from 'unist-util-visit'
 import type { ContentTransformer, MarkdownNode } from '@nuxt/content/dist/runtime/types'
-import type { Page, Post } from 'mycelium/types'
-import { loadIconForTag, tagIsIcon } from '../util/icons'
+import { loadIconForTag, tagIsIcon } from '../utils'
 
 const map: Record<string, any> = {}
 
 export default <ContentTransformer> {
   name: 'md-icons',
   extentions: ['.md'],
-  async transform(content: Post | Page) {
+  async transform(content) {
     // transform icon in frontmatter
     if (content.icon && tagIsIcon(content.icon))
       content.icon = (await loadIconForTag(content.icon)).svg

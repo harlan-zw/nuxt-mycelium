@@ -1,6 +1,6 @@
 import { visit } from 'unist-util-visit'
 import type { ContentTransformer, MarkdownNode } from '@nuxt/content/dist/runtime/types'
-import { computeSizes } from '../util/image'
+import { computeSizes } from '../logic'
 
 export default <ContentTransformer> {
   name: 'nuxt-image',

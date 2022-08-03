@@ -45,8 +45,8 @@ export default defineNuxtConfig({
     'nuxt-schema-org',
     'nuxt-windicss',
     // custom content modules, need to come before the content module
-    resolvePath('modules/unplugin-icons'),
-    resolvePath('modules/content-utils'),
+    '@mycelium/addons',
+    '@mycelium/icons',
     '@nuxt/content',
   ],
   schemaOrg: {

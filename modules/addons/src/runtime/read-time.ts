@@ -1,6 +1,5 @@
 import { visit } from 'unist-util-visit'
 import type { ContentTransformer, MarkdownNode } from '@nuxt/content/dist/runtime/types'
-import type { Post } from 'mycelium/types'
 
 function calculateReadingMins(text: string) {
   const wordsPerMinute = 220
@@ -37,7 +36,7 @@ const TEXT_NODES = [
 export default <ContentTransformer> {
   name: 'read-time',
   extentions: ['.md'],
-  async transform(content: Post) {
+  async transform(content) {
     const textNodes: string[] = []
     visit(
       content.body,
