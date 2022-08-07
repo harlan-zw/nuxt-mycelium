@@ -1,10 +1,9 @@
 import type { ContentTransformer } from '@nuxt/content/dist/runtime/types'
-import type { Page, Post } from '@nuxt-mycelium/theme'
 
 export default <ContentTransformer> {
   name: 'meta-normaliser',
   extentions: ['.md'],
-  async transform(content: Post | Page) {
+  async transform(content) {
     // turn the content _path to a real path
     if (content._path.startsWith('/pages')) {
       content.path = content._path.replace('/pages', '')

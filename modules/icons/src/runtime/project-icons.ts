@@ -1,5 +1,5 @@
 import type { ContentTransformer } from '@nuxt/content/dist/runtime/types'
-import { loadIconForTag, tagIsIcon } from '../utils'
+import { loadIconForTag, tagIsIcon } from './utils'
 
 export default <ContentTransformer> {
   name: 'project-icons',

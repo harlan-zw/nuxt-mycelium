@@ -8,7 +8,7 @@ export interface ModuleOptions {
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: 'mycelium-icons',
+    name: '@nuxt-mycelium/icons',
     configKey: 'mycelium',
   },
   defaults: {

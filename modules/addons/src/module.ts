@@ -1,6 +1,10 @@
 import { addComponentsDir, createResolver, defineNuxtModule } from '@nuxt/kit'
 
 export default defineNuxtModule({
+  meta: {
+    name: '@nuxt-mycelium/addons',
+    configKey: 'mycelium',
+  },
   async setup(_, nuxt) {
     const resolver = createResolver(import.meta.url)
     const transformer = (path = '') => resolver.resolve('runtime', path)

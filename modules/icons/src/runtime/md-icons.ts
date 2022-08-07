@@ -1,6 +1,6 @@
 import { visit } from 'unist-util-visit'
 import type { ContentTransformer, MarkdownNode } from '@nuxt/content/dist/runtime/types'
-import { loadIconForTag, tagIsIcon } from '../utils'
+import { loadIconForTag, tagIsIcon } from './utils'
 
 const map: Record<string, any> = {}
 
