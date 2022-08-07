@@ -1,5 +1,5 @@
 import type { ContentTransformer } from '@nuxt/content/dist/runtime/types'
-import type { Page, Post } from 'mycelium/types'
+import type { Page, Post } from '@nuxt-mycelium/theme'
 
 export default <ContentTransformer> {
   name: 'meta-normaliser',

@@ -13,6 +13,7 @@ export default defineNuxtConfig({
   //   '@nuxt-mycelium/theme': resolvePath(),
   // },
   app: {
+    // @ts-expect-error untyped
     theme: {
       meta: {
         name: 'Mycelium Theme',
@@ -105,3 +106,5 @@ export default defineNuxtConfig({
     },
   },
 })
+
+export * from './types'

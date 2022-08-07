@@ -8,6 +8,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 export default defineNuxtConfig({
   extends: ['@nuxt-mycelium/theme'],
   alias: {
+    '@nuxt-mycelium/theme': resolve(__dirname, '../theme/nuxt.config.ts'),
     '@nuxt-mycelium/icons': resolve(__dirname, '../modules/icons/src/module.ts'),
     '@nuxt-mycelium/addons': resolve(__dirname, '../modules/addons/src/module.ts'),
   },

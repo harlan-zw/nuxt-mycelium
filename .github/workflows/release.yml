@@ -27,6 +27,12 @@ jobs:
       - name: Install Dependencies
         run: pnpm install && cd playground && pnpm install
 
+      - name: Stub
+        run: pnpm stub
+
+      - name: Build
+        run: pnpm build
+
       - name: Publish to NPM
         run: pnpm -r publish --access public --no-git-checks
         env:

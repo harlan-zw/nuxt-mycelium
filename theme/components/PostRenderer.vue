@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { PropType } from 'vue'
-import type { Post } from 'mycelium/types'
+import type { Post } from '@nuxt-mycelium/theme'
 import { dayNth } from '../logic'
 
 const props = defineProps({
@@ -17,10 +17,10 @@ const schema = computed(() => props.post.schema || {})
 
 <template>
   <div>
-    <SchemaOrgArticle
-      v-bind="{ schema }"
-    />
-    <Breadcrumbs class="mb-2" />
+<!--    <SchemaOrgArticle-->
+<!--      v-bind="{ schema }"-->
+<!--    />-->
+<!--    <Breadcrumbs class="mb-2" />-->
     <h1 class="!text-3xl font-header font-bold !leading-11 !md:(text-4xl leading-14) mb-7">
       {{ post.title }}
     </h1>

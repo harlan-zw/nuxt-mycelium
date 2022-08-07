@@ -1,7 +1,6 @@
-import type { JsonParsedContent, Page, Post, ProjectList } from 'mycelium'
+import type { JsonParsedContent, Page, Post, ProjectList } from '../types'
 import { groupBy } from '../logic'
-import { useAsyncData } from '#app'
-import { queryContent, useRoute } from '#imports'
+import { queryContent, useAsyncData, useRoute } from '#imports'
 
 export const useProjects = () => {
   return useAsyncData('content:projects', () =>

@@ -6,10 +6,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview"
   },
-  "dependencies": {
-    "@nuxt-mycelium/theme": "link:../theme"
-  },
   "devDependencies": {
-    "nuxt": "npm:nuxt3@3.0.0-rc.6-27661960.60656df"
+    "nuxt": "npm:nuxt3@3.0.0-rc.6-27661960.60656df",
+    "@nuxt-mycelium/theme": "link:../theme"
   }
 }

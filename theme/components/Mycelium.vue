@@ -14,17 +14,17 @@ const config = useTheme()
       <Link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <Link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <Link rel="preconnect" href="https://res.cloudinary.com" />
-      <SchemaOrgPerson
-        :name="config.site.name"
-        :image="config.site.cover"
-        :same-as="config.site.sameAs"
-      />
-      <SchemaOrgWebSite
-        :name="config.site.name"
-        :image="config.site.image"
-        :description="config.site.description"
-      />
-      <SchemaOrgWebPage />
+<!--      <SchemaOrgPerson-->
+<!--        :name="config.site.name"-->
+<!--        :image="config.site.cover"-->
+<!--        :same-as="config.site.sameAs"-->
+<!--      />-->
+<!--      <SchemaOrgWebSite-->
+<!--        :name="config.site.name"-->
+<!--        :image="config.site.image"-->
+<!--        :description="config.site.description"-->
+<!--      />-->
+<!--      <SchemaOrgWebPage />-->
     </Head>
     <Body class="text-gray-800 dark:text-gray-100 antialiased">
       <NuxtLoadingIndicator />

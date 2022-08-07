@@ -18,6 +18,7 @@ export default defineNuxtModule({
     })
 
     // custom transformers
+    // @ts-expect-error untyped
     nuxt.hooks.hook('content:context', (ctx) => {
       // before nuxt content transformers
       ctx.transformers.unshift(...[

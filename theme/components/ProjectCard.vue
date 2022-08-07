@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { PropType } from 'vue'
-import type { Project } from 'mycelium/types'
+import type { Project } from '@nuxt-mycelium/theme'
 
 const props = defineProps({
   project: Object as PropType<Project>,

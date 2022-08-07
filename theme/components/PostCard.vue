@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { PropType } from 'vue'
 import { TransitionPresets } from '@vueuse/core'
-import type { Post } from 'mycelium/types'
+import type { Post } from '@nuxt-mycelium/theme'
 import { dayNth } from '../logic'
 import { useElementHover, useTransition } from '#imports'
 

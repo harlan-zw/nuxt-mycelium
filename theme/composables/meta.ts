@@ -1,5 +1,5 @@
 import type { MaybeRef } from '@vueuse/schema-org'
-import type { Page } from 'mycelium'
+import type { Page } from '../types'
 import { nextTick, unref, useHead, useTheme, watch } from '#imports'
 
 export const useCustomContentHead = (doc: MaybeRef<Partial<Page>>) => {

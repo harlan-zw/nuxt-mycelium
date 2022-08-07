@@ -17,7 +17,8 @@ export default defineNuxtModule<ModuleOptions>({
   setup(options, nuxt) {
     const resolver = createResolver(import.meta.url)
 
-    // register unplugin icons
+    // register unplugin
+    // @ts-expect-error untyped
     nuxt.hooks.hook('content:context', (ctx) => {
       ctx.transformers.push(resolver.resolve('runtime/md-icons'))
       ctx.transformers.push(resolver.resolve('runtime/project-icons'))
