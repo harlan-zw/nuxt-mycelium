@@ -7,7 +7,7 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "nuxt": "npm:nuxt3@3.0.0-rc.6-27661960.60656df",
-    "@nuxt-mycelium/theme": "link:../theme"
+    "@nuxt-mycelium/theme": "link:../theme",
+    "nuxt": "npm:nuxt3@3.0.0-rc.6-27661960.60656df"
   }
 }
