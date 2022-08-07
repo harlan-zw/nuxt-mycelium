@@ -1,6 +1,6 @@
 {
   "name": "@nuxt-mycelium/theme",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "main": "nuxt.config.ts",
   "types": "types.ts",
   "files": [
