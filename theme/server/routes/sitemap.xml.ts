@@ -1,7 +1,9 @@
 import { SitemapStream, streamToPromise } from 'sitemap'
 import { contentPaths } from '../util/content'
+// @ts-expect-error untyped
+import { defineCachedEventHandler } from '#imports'
 
-export default defineEventHandler(async (event) => {
+export default defineCachedEventHandler(async (event) => {
   // Grab theme configuration
   const theme = await $fetch('/api/_theme/options')
 

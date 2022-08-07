@@ -33,7 +33,6 @@ export default defineNuxtModule({
       ctx.transformers.push(...[
         transformer('breadcrumbs'),
         transformer('nuxt-image'),
-        transformer('storage-meta'),
         transformer('read-time'),
         transformer('meta-normaliser'),
       ])
