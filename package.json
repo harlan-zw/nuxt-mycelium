@@ -6,7 +6,7 @@
   "scripts": {
     "changelog-md": "auto-changelog --commit-limit false --hide-credit",
     "build": "pnpm -r --parallel --filter=./modules/** run prepack",
-    "dev": "pnpm -r --parallel --filter=./modules/** run dev:prepare",
+    "prepare": "pnpm -r --parallel --filter=./modules/** run dev:prepare",
     "play": "cd playground && pnpm dev",
     "lint": "eslint . --fix",
     "lint:check": "eslint .",
