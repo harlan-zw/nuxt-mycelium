@@ -5,8 +5,9 @@
   "packageManager": "pnpm@7.6.0",
   "scripts": {
     "changelog-md": "auto-changelog --commit-limit false --hide-credit",
-    "build": "pnpm -r --parallel --filter=./packages/** run build",
-    "dev": "pnpm -r --parallel --filter=./packages/** run dev",
+    "build": "pnpm -r --parallel --filter=./modules/** run prepack",
+    "dev": "pnpm -r --parallel --filter=./modules/** run dev:prepare",
+    "play": "cd playground && pnpm dev",
     "lint": "eslint . --fix",
     "lint:check": "eslint .",
     "release": "bumpp package.json theme/package.json --commit --push --tag",
@@ -16,8 +17,8 @@
     "@antfu/eslint-config": "^0.25.2",
     "bumpp": "^8.2.1",
     "changelogen": "^0.1.1",
-    "eslint": "^8.20.0",
+    "eslint": "^8.21.0",
     "unbuild": "^0.7.6",
-    "vitest": "^0.19.1"
+    "vitest": "^0.21.0"
   }
 }

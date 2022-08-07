@@ -1,12 +1,21 @@
-import { createResolver, defineNuxtModule } from '@nuxt/kit'
+import { addComponentsDir, createResolver, defineNuxtModule } from '@nuxt/kit'
 
 export default defineNuxtModule({
   async setup(_, nuxt) {
     const resolver = createResolver(import.meta.url)
-    const transformer = (path = '') => resolver.resolve('runtime/content', path)
+    const transformer = (path = '') => resolver.resolve('runtime', path)
 
     // resolve transformer path
     nuxt.options.build.transpile.push(transformer())
+
+    await addComponentsDir({
+      path: resolver.resolve('components'),
+      global: true,
+    })
+
+    nuxt.hooks.hookOnce('autoImports:dirs', (dirs) => {
+      dirs.unshift(resolver.resolve('composables'))
+    })
 
     // custom transformers
     nuxt.hooks.hook('content:context', (ctx) => {

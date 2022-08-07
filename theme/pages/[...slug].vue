@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { createError } from 'h3'
-import { callWithNuxt, throwError, useNuxtApp } from '#app'
+import { callWithNuxt, showError, useNuxtApp } from '#app'
 import { useCustomContentHead } from '#imports'
 
 const routesContentQuery = await useRoutesContent()
@@ -10,7 +10,7 @@ const { data: pageContent, error } = routesContentQuery
 // presume any error is a 404, this should pickup any rendering issues
 if (error.value) {
   const nuxtApp = useNuxtApp()
-  callWithNuxt(nuxtApp, throwError, [createError({
+  callWithNuxt(nuxtApp, showError, [createError({
     statusCode: 404,
     statusMessage: `Page not found: ${useRoute().path}`,
   })])

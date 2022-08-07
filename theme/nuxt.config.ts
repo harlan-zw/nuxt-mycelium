@@ -9,9 +9,9 @@ const resolvePath = (p = '') => resolve(dirname(fileURLToPath(import.meta.url)),
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
-  alias: {
-    'nuxt-mycelium': resolvePath(),
-  },
+  // alias: {
+  //   '@nuxt-mycelium/theme': resolvePath(),
+  // },
   app: {
     theme: {
       meta: {
@@ -21,9 +21,9 @@ export default defineNuxtConfig({
       },
     },
   },
-  experimental: {
-    viteNode: true,
-  },
+  // experimental: {
+  //   viteNode: true,
+  // },
   vite: {
     css: {
       preprocessorOptions: {
@@ -39,14 +39,15 @@ export default defineNuxtConfig({
     '@nuxt-themes/config/module',
     '@nuxtjs/design-tokens/module',
     // Website
+    'nuxt-full-static',
     '@nuxtjs/color-mode',
     '@vueuse/nuxt',
     '@nuxt/image',
     'nuxt-schema-org',
     'nuxt-windicss',
     // custom content modules, need to come before the content module
-    '@mycelium/addons',
-    '@mycelium/icons',
+    '@nuxt-mycelium/addons',
+    '@nuxt-mycelium/icons',
     '@nuxt/content',
   ],
   schemaOrg: {

@@ -1,3 +1,4 @@
 packages:
   - theme
-  - playground
+  - modules/addons
+  - modules/icons
