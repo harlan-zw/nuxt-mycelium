@@ -1,7 +1,8 @@
-import { addVitePlugin, createResolver, defineNuxtModule } from '@nuxt/kit'
+import { addVitePlugin, createResolver, defineNuxtModule, resolvePath } from '@nuxt/kit'
 import unpluginIcons from 'unplugin-icons'
 import Components from 'unplugin-vue-components/vite'
 import IconsResolver from 'unplugin-icons/resolver'
+import { dirname } from 'pathe'
 
 export interface ModuleOptions {
 }
@@ -14,7 +15,7 @@ export default defineNuxtModule<ModuleOptions>({
   defaults: {
     addPlugin: true,
   },
-  setup(options, nuxt) {
+  async setup(options, nuxt) {
     const resolver = createResolver(import.meta.url)
 
     // register unplugin
@@ -31,7 +32,9 @@ export default defineNuxtModule<ModuleOptions>({
     addVitePlugin(Components({
       dts: '.nuxt/icons.d.ts',
       // no nuxt components
-      dirs: [],
+      dirs: [
+        dirname(await resolvePath('@nuxt-mycelium/theme')),
+      ],
       resolvers: [
         IconsResolver(),
       ],
