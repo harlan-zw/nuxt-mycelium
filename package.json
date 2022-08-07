@@ -14,13 +14,13 @@
     "test": "vitest"
   },
   "devDependencies": {
-    "nuxt": "npm:nuxt3@3.0.0-rc.6-27661960.60656df",
-    "@nuxtjs/eslint-config-typescript": "^10.0.0",
-    "typescript": "^4.7.4",
     "@antfu/eslint-config": "^0.25.2",
+    "@nuxtjs/eslint-config-typescript": "^10.0.0",
     "bumpp": "^8.2.1",
     "changelogen": "^0.1.1",
     "eslint": "^8.21.0",
+    "nuxt": "npm:nuxt3@3.0.0-rc.6-27661960.60656df",
+    "typescript": "^4.7.4",
     "unbuild": "^0.7.6",
     "vitest": "^0.21.0"
   }
